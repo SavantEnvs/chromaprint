@@ -1,0 +1,9 @@
+project: savantenvs/chromaprint
+target: fuzz_decode_fingerprint
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_decode_fingerprint/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decode_fingerprint
+    libfuzzer: true
+    timeout: 10
